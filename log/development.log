@@ -322,3 +322,30 @@ Processing by SchoolClassesController#show as HTML
   Parameters: {"id"=>"5"}
   [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 5]]
   Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/school_classes/5" for 96.242.130.35 at 2018-06-28 11:25:59 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/school_classes" for 96.242.130.35 at 2018-06-28 11:26:04 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DPV8RsjnLL+G67mm4XyJNo4gRmIm3s4qOopaCxxsidVkjaY165yW5qKJgY5hLSosp67c19RpqcHHVKUEM+R2pA==", "school_class"=>{"title"=>"Science", "room_number"=>"440"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "school_classes" ("title", "room_number") VALUES (?, ?)  [["title", "Science"], ["room_number", 440]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://159.203.187.180:59457/school_classes/6
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/6" for 96.242.130.35 at 2018-06-28 11:26:04 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
