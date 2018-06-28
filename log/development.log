@@ -314,3 +314,4 @@ Processing by SchoolClassesController#show as HTML
   Parameters: {"id"=>"5"}
   [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 5]]
   Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms)
